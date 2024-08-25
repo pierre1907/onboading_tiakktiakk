@@ -1,0 +1,67 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  mat-card {
+    min-width: 500px;
+    margin: 2em auto;
+    text-align: center;
+  }
+  
+  mat-form-field {
+    display: block;
+  }
+  
+  .checkbox{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .checkbox a {
+    color: green;
+    text-decoration: none;
+  }
+  
+  .signup{
+    display: flex;
+    justify-content:center ;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .signup a {
+    color: #FE8630;
+    text-decoration: none;
+  }
+  
+  
+  .images{
+    display: flex;
+    justify-content:center ;
+    margin-top: 100px;
+  }
+  
+  .images img {
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+
+  h2{
+    color: #FE8630;
+  }
+
+  .btn-login{
+    width: 40%; 
+    padding: 8px; 
+    font-size: 16px; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    background-color: #FE8630; 
+    color: black;
+    border-radius: 10px;
+
+  }

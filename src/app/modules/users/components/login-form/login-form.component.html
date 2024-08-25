@@ -1,0 +1,50 @@
+<mat-card>
+
+    <mat-card-content>
+        <form [formGroup]="signInForm" (ngSubmit)="onSubmit()" (keydown.enter)="onSubmit()" novalidate>
+          <h2>Connectez-vous</h2>
+          <mat-form-field>
+            <input matInput placeholder="Email" name="email" formControlName="email">
+            <div *ngIf="!email?.valid && (email?.dirty ||email?.touched)">
+              <mat-error >
+                  {{errorEmail}}
+                </mat-error>
+            </div>
+            
+          </mat-form-field>
+  
+          <mat-form-field>
+            <input matInput [type]="hidePassword ? 'password' : 'text'" placeholder="Mot de passe" name="password" formControlName="password">
+            <button mat-icon-button matSuffix type="button" (click)="togglePasswordVisibility()">
+              <mat-icon>{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+            </button>
+            <div  *ngIf="!password?.valid && (password?.dirty || password?.touched)">
+              <mat-error>
+                  {{ errorPassword }}
+                </mat-error>
+            </div>
+            
+          </mat-form-field>
+  
+          <div class="checkbox">
+          <mat-checkbox color="primary" class="example-margin"> <span style="color: #8f8c8cdc"> Se souvenir de moi</span></mat-checkbox>
+          <a routerLink="#">Mot de passe oublié ?</a> <!-- /users/forgot-password -->
+          </div>
+          <!-- <button mat-raised-button [disabled]="!signInForm.valid" color="primary">Se connecter</button> -->
+
+          <button class="btn-login"
+            mat-raised-button 
+            [disabled]="!signInForm.valid" 
+            color="primary">
+            Se connecter
+        </button>
+
+        </form>
+  
+        <div class="signup">
+          <span style="color: #8f8c8cdc">Pas encore inscrit ?<a routerLink="#"> Inscrivez-vous</a> </span>
+        </div>
+      </mat-card-content>
+  
+</mat-card>
+
