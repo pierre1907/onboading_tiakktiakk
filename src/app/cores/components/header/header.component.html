@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button *ngIf="loggedIn" mat-icon-button (click)="toggleSidebar()" class="example-icon" aria-label="Afficher ou cacher le menu lateral">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <!-- <a routerLink="/"> <img src="/assets/images/logo.png" height="80px" width="120px" alt="Logo ADPME"/>  </a> -->
+    <!--    <a routerLink="/" class="brand"> <img src="/assets/images/logosamapme.png" height="150px" width="350px" alt="Logo ADPME" class="object-cover img"/>  </a>-->
+    <button mat-button   mat-stroked-button class="logout" color="primary" [matMenuTriggerFor]="menu">{{prenom}} {{name}}   {{name}} <mat-icon>account_circle</mat-icon></button>
+    <mat-menu mat-button  #menu="matMenu">
+      <button routerLink="/admin"  mat-menu-item> <mat-icon>dashboard</mat-icon>Accueil </button>
+      <button routerLink="/"  mat-menu-item> <mat-icon>dashboard</mat-icon>Accueil </button>
+      <button mat-menu-item (click)="myProfil()"> <mat-icon>manage_accounts</mat-icon>Mon profil </button>
+      <button mat-menu-item (click)="openModal()"> <mat-icon>password</mat-icon>Modifier mon mot de passe </button>
+      <button mat-menu-item (click)="logOut()"><mat-icon>logout</mat-icon> Déconnexion</button>
+
+
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
+
+<!-- *ngIf="loggedIn"; *ngIf="role === 'ROLE_ADMIN'"; *ngIf="role != 'ROLE_ADMIN'"-->

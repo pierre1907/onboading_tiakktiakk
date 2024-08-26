@@ -1,0 +1,117 @@
+mat-drawer-container, mat-drawer-content {
+  display: block;
+  height: 100%;
+  overflow: hidden;
+}
+mat-drawer-container {
+  height: calc(100vh - 65px);
+}
+
+mat-drawer {
+  /* width: 200px; */
+  width: 304px;
+  min-width: 304px;
+  border-right: none;
+  /* background: #002b5c; */
+  color: white;
+  /* border-radius: 5px; */
+  text-align: center;
+}
+
+main {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.nav-caption{
+  display: inline-block;
+  padding-left: 6px;
+}
+
+.sidenav-header {
+  background: linear-gradient(#1b5e20, #228628);
+  background-size: cover;
+}
+.selected-item {
+  /* border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px; */
+  background: linear-gradient(to right ,#228628, #1fa127) !important;
+  border-radius: 4px;
+  color: white !important;
+  /* background-color: linear-gradient(#228628); */
+}
+.mat-list-item:hover {
+  /* background: linear-gradient(to right ,#228628, #1fa127); */
+  color: black;
+  border-radius: 4px;
+}
+
+
+.mat-expansion-panel .mat-expansion-panel-header.cdk-keyboard-focused:not([aria-disabled="true"]), .mat-expansion-panel .mat-expansion-panel-header.cdk-program-focused:not([aria-disabled="true"]), .mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:hover:not([aria-disabled="true"]) {
+
+  /* background: linear-gradient(to right ,#228628, #1fa127);
+  color: white; */
+  color: black;
+}
+.mat-expansion-panel .mat-expanded {
+  background: linear-gradient(to right ,#228628, #1fa127);
+  color: white;
+}
+
+
+
+/* Pour afficher l'indicateur pour afficher les sous menus en blanc lorsque les sous menus doivent s'afficher */
+::ng-deep .selected-item > .mat-expansion-indicator::after {
+  color: white;
+}
+::ng-deep .mat-expansion-panel-header:hover > .mat-expansion-indicator::after {
+  /* color: white; */
+}
+::ng-deep .mat-expansion-panel .mat-expanded > .mat-expansion-indicator::after {
+  color: white;
+}
+
+/* La couleur par default de mat-expansion-indicator */
+::ng-deep .mat-expansion-indicator::after {
+  color: black;
+}
+
+
+
+/* .mat-expansion-panel .mat-expansion-panel-header.cdk-keyboard-focused:not([aria-disabled="true"]), .mat-expansion-panel .mat-expansion-panel-header.cdk-program-focused:not([aria-disabled="true"]), .mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:hover:not([aria-disabled="true"]) {
+
+    background: rgba(255,255,255,.04);
+
+}  */
+.mat-expansion-panel-header:not([aria-disabled="true"]) {
+
+  cursor: pointer;
+
+}
+.mat-expansion-panel-header:focus, .mat-expansion-panel-header:hover {
+
+  outline: none;
+
+}
+.mat-expansion-panel-header {
+  padding: 0 16px;
+}
+
+.avatar {
+  margin-top: 16px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  font-size: 100px;
+}
+
+.name {
+  margin-top: 8px;
+  font-weight: normal;
+}
+
+.designation {
+  margin-top: 2px;
+  font-size: 0.7rem;
+  color: lightgrey;
+}
